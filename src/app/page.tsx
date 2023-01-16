@@ -1,10 +1,13 @@
 'use client'
 import {Inter} from '@next/font/google'
-import {InputField} from '@/components/InputField'
 import {useEffect, useState} from 'react'
 import {Card} from '@/components/Card'
+import {Tab} from '@headlessui/react'
+import classNames from 'classnames'
 import {FileUpload} from '@/components/FileUpload'
-import {ProductSearchResult} from '@/components/ProductSearchResult'
+import {InputField} from '@/components/InputField'
+import {ProductSearchResultMobile} from '@/components/ProductSearchResultMobile'
+import {ProductSearchResultDesktop} from '@/components/ProductSearchResultDesktop'
 
 const inter = Inter({subsets: ['latin']})
 
@@ -51,7 +54,44 @@ export default function Home() {
         />
       </Card>
       {!!base64 && !!title && (
-        <ProductSearchResult image={base64} title={title} />
+        <Tab.Group>
+          <Tab.List className="flex space-x-1 rounded-xl p-1 bg-gray-100 mb-6">
+            <Tab
+              className={({selected}) =>
+                classNames(
+                  'w-full rounded-lg py-4 text-lg font-medium leading-5 text-gray-900',
+                  'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
+                  selected
+                    ? 'bg-white shadow'
+                    : 'text-gray-900 hover:bg-black/[0.12] hover:text-black'
+                )
+              }
+            >
+              Search result (mobile)
+            </Tab>
+            <Tab
+              className={({selected}) =>
+                classNames(
+                  'w-full rounded-lg py-2.5 text-lg font-medium leading-5 text-gray-900',
+                  'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
+                  selected
+                    ? 'bg-white shadow'
+                    : 'text-gray-900 hover:bg-black/[0.12] hover:text-black'
+                )
+              }
+            >
+              Search result (desktop)
+            </Tab>
+          </Tab.List>
+          <Tab.Panels>
+            <Tab.Panel>
+              <ProductSearchResultMobile image={base64} title={title} />
+            </Tab.Panel>
+            <Tab.Panel>
+              <ProductSearchResultDesktop image={base64} title={title} />
+            </Tab.Panel>
+          </Tab.Panels>
+        </Tab.Group>
       )}
     </main>
   )

@@ -1,5 +1,5 @@
 {
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "cSpell.words": ["flowbite", "tailwindcss"]
+  "cSpell.words": ["flowbite", "headlessui", "tailwindcss"]
 }

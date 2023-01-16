@@ -5,7 +5,7 @@ interface ProductSearchResultProps {
   title: string
 }
 
-export const ProductSearchResult: FC<ProductSearchResultProps> = ({
+export const ProductSearchResultMobile: FC<ProductSearchResultProps> = ({
   image,
   title,
 }) => (
@@ -39,7 +39,7 @@ export const ProductSearchResult: FC<ProductSearchResultProps> = ({
             ($0.02/Count)
           </span>
         </div>
-        <span className="text-secondary text-light text-[12px] leading-[16px]">
+        <span className="text-secondary text-light mb-2 text-[12px] leading-[16px]">
           Save more with subscribe and save
         </span>
         <i className="prime-icon" />
