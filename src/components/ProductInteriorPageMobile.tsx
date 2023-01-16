@@ -24,7 +24,7 @@ export const ProductInteriorPageMobile: FC<ProductSearchResultProps> = ({
       </div>
       <h2 className="text-[1.3rem] leading-[1.4]">{title}</h2>
       <img
-        className="max-w-[613px] max-h-[613px] min-w-[600px] mr-8 aspect-square my-16"
+        className="max-w-[300px] max-h-[300px] min-w-[300px] mr-8 aspect-square my-16"
         src={image}
       />
       <hr />

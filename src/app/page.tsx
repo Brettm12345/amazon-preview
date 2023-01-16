@@ -62,7 +62,7 @@ export default function Home() {
               className={({selected}) =>
                 classNames(
                   'w-full rounded-lg py-4 text-lg font-medium leading-5 text-gray-900',
-                  'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
+                  'ring-white ring-opacity-60 ring-offset-2 ring-offset-gray-400 focus:outline-none focus:ring-2',
                   selected
                     ? 'bg-white shadow'
                     : 'text-gray-900 hover:bg-black/[0.12] hover:text-black'
@@ -75,7 +75,7 @@ export default function Home() {
               className={({selected}) =>
                 classNames(
                   'w-full rounded-lg py-2.5 text-lg font-medium leading-5 text-gray-900',
-                  'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
+                  'ring-white ring-opacity-60 ring-offset-2 ring-offset-gray-400 focus:outline-none focus:ring-2',
                   selected
                     ? 'bg-white shadow'
                     : 'text-gray-900 hover:bg-black/[0.12] hover:text-black'
@@ -88,7 +88,7 @@ export default function Home() {
               className={({selected}) =>
                 classNames(
                   'w-full rounded-lg py-2.5 text-lg font-medium leading-5 text-gray-900',
-                  'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
+                  'ring-white ring-opacity-60 ring-offset-2 ring-offset-gray-400 focus:outline-none focus:ring-2',
                   selected
                     ? 'bg-white shadow'
                     : 'text-gray-900 hover:bg-black/[0.12] hover:text-black'
