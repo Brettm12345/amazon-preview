@@ -9,7 +9,7 @@ interface CardProps {
 export const Card: FC<CardProps> = ({children, className}) => (
   <div
     className={classNames(
-      'block max-w-2xl p-6 bg-white border border-gray-200 rounded-lg shadow-md',
+      'block p-6 bg-white border border-gray-200 rounded-lg shadow-md',
       className
     )}
   >

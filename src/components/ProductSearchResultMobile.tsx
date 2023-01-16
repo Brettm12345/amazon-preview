@@ -9,7 +9,7 @@ export const ProductSearchResultMobile: FC<ProductSearchResultProps> = ({
   image,
   title,
 }) => (
-  <div className="flex">
+  <div className="flex max-w-2xl mx-auto">
     <div className="image-column">
       <div className="flex flex-col px-1 relative">
         <div className="px-2 py-4 flex-grow image-overlay-grey">

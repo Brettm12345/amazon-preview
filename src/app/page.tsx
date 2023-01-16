@@ -8,6 +8,8 @@ import {FileUpload} from '@/components/FileUpload'
 import {InputField} from '@/components/InputField'
 import {ProductSearchResultMobile} from '@/components/ProductSearchResultMobile'
 import {ProductSearchResultDesktop} from '@/components/ProductSearchResultDesktop'
+import {ProductInteriorPageDesktop} from '@/components/ProductInteriorPageDesktop'
+import {ProductInteriorPageMobile} from '@/components/ProductInteriorPageMobile'
 
 const inter = Inter({subsets: ['latin']})
 
@@ -31,8 +33,8 @@ export default function Home() {
     })()
   }, [file])
   return (
-    <main className="max-w-2xl m-auto mt-10">
-      <Card className="space-y-6 mb-6 mx-auto">
+    <main className="max-w-[1200px] m-auto mt-10">
+      <Card className="space-y-6 mb-6 w-full">
         <InputField
           value={title ?? ''}
           onChange={event => {
@@ -82,6 +84,32 @@ export default function Home() {
             >
               Search result (desktop)
             </Tab>
+            <Tab
+              className={({selected}) =>
+                classNames(
+                  'w-full rounded-lg py-2.5 text-lg font-medium leading-5 text-gray-900',
+                  'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
+                  selected
+                    ? 'bg-white shadow'
+                    : 'text-gray-900 hover:bg-black/[0.12] hover:text-black'
+                )
+              }
+            >
+              Interior page (desktop)
+            </Tab>
+            <Tab
+              className={({selected}) =>
+                classNames(
+                  'w-full rounded-lg py-2.5 text-lg font-medium leading-5 text-gray-900',
+                  'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
+                  selected
+                    ? 'bg-white shadow'
+                    : 'text-gray-900 hover:bg-black/[0.12] hover:text-black'
+                )
+              }
+            >
+              Interior page (mobile)
+            </Tab>
           </Tab.List>
           <Tab.Panels>
             <Tab.Panel>
@@ -89,6 +117,12 @@ export default function Home() {
             </Tab.Panel>
             <Tab.Panel>
               <ProductSearchResultDesktop image={base64} title={title} />
+            </Tab.Panel>
+            <Tab.Panel>
+              <ProductInteriorPageDesktop image={base64} title={title} />
+            </Tab.Panel>
+            <Tab.Panel>
+              <ProductInteriorPageMobile image={base64} title={title} />
             </Tab.Panel>
           </Tab.Panels>
         </Tab.Group>
