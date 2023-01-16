@@ -24,6 +24,7 @@ export const FileUpload: FC<FileUploadProps> = ({
     <input
       className="block w-full text-lg text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50"
       aria-describedby={helpId}
+      accept="image/*"
       onChange={onChange}
       id={id}
       type="file"
