@@ -95,7 +95,7 @@ export default function Home() {
                 )
               }
             >
-              Interior page (desktop)
+              Product page (desktop)
             </Tab>
             <Tab
               className={({selected}) =>
@@ -108,7 +108,7 @@ export default function Home() {
                 )
               }
             >
-              Interior page (mobile)
+              Product page (mobile)
             </Tab>
           </Tab.List>
           <Tab.Panels>
