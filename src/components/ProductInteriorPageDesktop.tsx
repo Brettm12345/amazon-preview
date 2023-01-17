@@ -17,7 +17,7 @@ export const ProductInteriorPageDesktop: FC<ProductSearchResultProps> = ({
     <div className="flex flex-col px-[4px">
       <h2 className="text-[24px] leading-[32px]">{title}</h2>
       <span className="text-[#007185] text-[14px] leading-[20px]">
-        Visit the XPRS Nutra Store
+        Visit the Vegavero Store
       </span>
       <div className="flex items-center mb-4">
         <span className="text-[#007185] text-[12px]">4.5</span>
@@ -37,10 +37,10 @@ export const ProductInteriorPageDesktop: FC<ProductSearchResultProps> = ({
               </td>
               <td className="pl-[3px] flex">
                 <span className="text-[#B12704] text-[18px] leading-[24px]">
-                  $8.90
+                  €8.90
                 </span>
                 <span className="text-[#B12704] text-[12px] leading-[16px] mt-2 ml-1">
-                  ($0.13 / Count)
+                  (€0.13 / Count)
                 </span>
               </td>
               <span className="text-[14px] leading-[20px]">

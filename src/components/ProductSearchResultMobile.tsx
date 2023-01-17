@@ -30,13 +30,13 @@ export const ProductSearchResultMobile: FC<ProductSearchResultProps> = ({
         </div>
         <div className="flex">
           <span className="price">
-            <span className="price-symbol">$</span>
+            <span className="price-symbol">€</span>
             <span className="price-whole">8</span>
             <span className="price-fraction">90</span>
           </span>
           <span className="w-[0.4em]" />
           <span className="text-secondary text-light text-[12px] leading-[16px] mt-4">
-            ($0.02/Count)
+            (€0.02/Count)
           </span>
         </div>
         <span className="text-secondary text-light mb-2 text-[12px] leading-[16px]">
