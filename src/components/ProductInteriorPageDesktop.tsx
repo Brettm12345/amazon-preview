@@ -10,7 +10,7 @@ export const ProductInteriorPageDesktop: FC<ProductSearchResultProps> = ({
   image,
   title,
 }) => (
-  <div className="flex">
+  <div className="flex space-x-6">
     <ImageGallery images={image} />
     <div className="flex flex-col px-[4px">
       <h2 className="text-[24px] leading-[32px]">{title}</h2>
