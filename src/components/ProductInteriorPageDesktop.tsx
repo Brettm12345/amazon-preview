@@ -1,7 +1,8 @@
 import {FC} from 'react'
+import {ImageGallery} from './ImageGallery'
 
 interface ProductSearchResultProps {
-  image: string
+  image: string[]
   title: string
 }
 
@@ -10,10 +11,7 @@ export const ProductInteriorPageDesktop: FC<ProductSearchResultProps> = ({
   title,
 }) => (
   <div className="flex">
-    <img
-      className="max-w-[613px] max-h-[613px] min-w-[600px] mr-8 aspect-square"
-      src={image}
-    />
+    <ImageGallery images={image} />
     <div className="flex flex-col px-[4px">
       <h2 className="text-[24px] leading-[32px]">{title}</h2>
       <span className="text-[#007185] text-[14px] leading-[20px]">

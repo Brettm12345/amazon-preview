@@ -5,6 +5,7 @@ import {Card} from '@/components/Card'
 import {Tab} from '@headlessui/react'
 import classNames from 'classnames'
 import {FileUpload} from '@/components/FileUpload'
+import {range} from 'fp-ts/NonEmptyArray'
 import {InputField} from '@/components/InputField'
 import {ProductSearchResultMobile} from '@/components/ProductSearchResultMobile'
 import {ProductSearchResultDesktop} from '@/components/ProductSearchResultDesktop'
@@ -15,20 +16,22 @@ const inter = Inter({subsets: ['latin']})
 
 const toBase64 = (file: File): Promise<string> =>
   new Promise((resolve, reject) => {
+    console.log(file)
+    const blob = new Blob([file])
     const reader = new FileReader()
-    reader.readAsDataURL(file)
+    reader.readAsDataURL(blob)
     reader.onload = () => resolve(reader.result as string)
     reader.onerror = error => reject(error)
   })
 
 export default function Home() {
   const [title, setTitle] = useState<string>()
-  const [file, setFile] = useState<File>()
-  const [base64, setBase64] = useState<string>()
+  const [file, setFile] = useState<File[]>()
+  const [base64, setBase64] = useState<string[]>()
   useEffect(() => {
     ;(async () => {
-      if (file) {
-        setBase64(await toBase64(file))
+      if (file?.length) {
+        setBase64(await Promise.all(file.map(file => toBase64(file))))
       }
     })()
   }, [file])
@@ -47,9 +50,12 @@ export default function Home() {
         />
         <FileUpload
           onChange={event => {
-            setFile(event.target.files?.item(0) ?? undefined)
+            setFile(
+              range(0, event.target.files?.length ?? 0).map(
+                n => event.target.files![n]
+              )
+            )
           }}
-          file={file}
           helpId="product_image_help"
           helpText="Upload your product image here"
           id="product_image"
@@ -113,16 +119,16 @@ export default function Home() {
           </Tab.List>
           <Tab.Panels>
             <Tab.Panel>
-              <ProductSearchResultMobile image={base64} title={title} />
+              <ProductSearchResultMobile image={base64[0]} title={title} />
             </Tab.Panel>
             <Tab.Panel>
-              <ProductSearchResultDesktop image={base64} title={title} />
+              <ProductSearchResultDesktop image={base64[0]} title={title} />
             </Tab.Panel>
             <Tab.Panel>
               <ProductInteriorPageDesktop image={base64} title={title} />
             </Tab.Panel>
             <Tab.Panel>
-              <ProductInteriorPageMobile image={base64} title={title} />
+              <ProductInteriorPageMobile image={base64[0]} title={title} />
             </Tab.Panel>
           </Tab.Panels>
         </Tab.Group>

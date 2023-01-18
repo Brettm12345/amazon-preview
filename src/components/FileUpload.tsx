@@ -1,14 +1,12 @@
 import {ChangeEventHandler, FC} from 'react'
 
 interface FileUploadProps {
-  file: File | undefined
   onChange: ChangeEventHandler<HTMLInputElement>
   id: string
   helpText: string
   helpId: string
 }
 export const FileUpload: FC<FileUploadProps> = ({
-  file,
   helpText,
   onChange,
   id,
@@ -25,6 +23,7 @@ export const FileUpload: FC<FileUploadProps> = ({
       className="block w-full text-lg text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50"
       aria-describedby={helpId}
       accept="image/*"
+      multiple
       onChange={onChange}
       id={id}
       type="file"
