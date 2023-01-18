@@ -1,12 +1,13 @@
 import {FC} from 'react'
+import {ImageCarousel} from './ImageCarousel'
 
 interface ProductSearchResultProps {
-  image: string
+  images: string[]
   title: string
 }
 
 export const ProductInteriorPageMobile: FC<ProductSearchResultProps> = ({
-  image,
+  images,
   title,
 }) => (
   <div className="flex w-full justify-between">
@@ -24,10 +25,7 @@ export const ProductInteriorPageMobile: FC<ProductSearchResultProps> = ({
           </span>
         </div>
         <h2 className="text-[1.3rem] leading-[1.4]">{title}</h2>
-        <img
-          className="max-w-[400px] max-h-[400px] min-w-[400px] mr-8 aspect-square my-16"
-          src={image}
-        />
+        <ImageCarousel images={images} />
         <hr />
         <div className="flex flex-col mb-4">
           <table>
@@ -105,10 +103,7 @@ export const ProductInteriorPageMobile: FC<ProductSearchResultProps> = ({
           </span>
         </div>
         <h2 className="text-[1.3rem] leading-[1.4]">{title}</h2>
-        <img
-          className="max-w-[300px] max-h-[300px] min-w-[300px] mr-8 aspect-square my-16"
-          src={image}
-        />
+        <ImageCarousel images={images} />
         <hr />
         <div className="flex flex-col mb-4">
           <table>

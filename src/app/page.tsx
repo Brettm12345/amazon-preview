@@ -129,7 +129,7 @@ export default function Home() {
               <ProductInteriorPageDesktop image={base64} title={title} />
             </Tab.Panel>
             <Tab.Panel>
-              <ProductInteriorPageMobile image={base64[0]} title={title} />
+              <ProductInteriorPageMobile images={base64} title={title} />
             </Tab.Panel>
           </Tab.Panels>
         </Tab.Group>
