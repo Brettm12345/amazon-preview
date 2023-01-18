@@ -28,6 +28,7 @@ export default function Home() {
   const [title, setTitle] = useState<string>()
   const [file, setFile] = useState<File[]>()
   const [base64, setBase64] = useState<string[]>()
+  console.log(base64)
   useEffect(() => {
     ;(async () => {
       if (file?.length) {
@@ -51,7 +52,7 @@ export default function Home() {
         <FileUpload
           onChange={event => {
             setFile(
-              range(0, event.target.files?.length ?? 0).map(
+              range(0, (event.target.files?.length ?? 0) - 1).map(
                 n => event.target.files![n]
               )
             )

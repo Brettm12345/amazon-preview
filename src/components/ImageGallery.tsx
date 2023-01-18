@@ -19,7 +19,7 @@ export const ImageGallery: FC<ImageGalleryProps> = ({images}) => {
               setSelectedIndex(index)
             }}
             className={classNames(
-              'w-[40px] h-[40px] border rounded-lg',
+              'w-[40px] h-[40px] min-w-[40px] min-h-[40px] border rounded-lg',
               index === selectedIndex ? 'ring-4 ring-blue-300 ' : ''
             )}
           />
