@@ -9,8 +9,9 @@ export const ProductSearchResultMobile: FC<ProductSearchResultProps> = ({
   image,
   title,
 }) => (
-  <div className="flex w-full justify-between">
-    <div className="flex max-w-[400px] mx-auto">
+  <div className="flex w-full  relative">
+    <img src="/iphone.png" className="w-[410px] -left-4 h-auto absolute" />
+    <div className="flex max-w-[400px] mt-24 px-4">
       <div className="image-column">
         <div className="flex flex-col px-1 relative">
           <div className="px-2 py-4 flex-grow image-overlay-grey">
@@ -53,7 +54,8 @@ export const ProductSearchResultMobile: FC<ProductSearchResultProps> = ({
         </div>
       </div>
     </div>
-    <div className="flex max-w-[300px] mx-auto">
+    <img src="/iphone.png" className="w-[310px] left-[410px] h-auto absolute" />
+    <div className="flex max-w-[300px] px-[28px] mt-[38px]">
       <div className="image-column">
         <div className="flex flex-col px-1 relative">
           <div className="px-2 py-4 flex-grow image-overlay-grey">

@@ -1,5 +1,6 @@
 import {FC} from 'react'
 import {ImageCarousel} from './ImageCarousel'
+import Image from 'next/image'
 
 interface ProductSearchResultProps {
   images: string[]
@@ -10,9 +11,10 @@ export const ProductInteriorPageMobile: FC<ProductSearchResultProps> = ({
   images,
   title,
 }) => (
-  <div className="flex w-full justify-between">
-    <div className="flex max-w-[400px] mx-auto">
-      <div className="flex flex-col px-[4px]">
+  <div className="flex w-full relative">
+    <img src="/iphone.png" className="w-[410px] -left-5 h-auto absolute" />
+    <div className="flex max-w-[400px]">
+      <div className="flex flex-col px-[28px] pt-[50px]">
         <div className="flex items-center justify-between">
           <span className="text-[#007185] text-[14px] leading-[20px]">
             Visit the Vegavero Store
@@ -53,44 +55,21 @@ export const ProductInteriorPageMobile: FC<ProductSearchResultProps> = ({
         </h2>
         <ul className="list">
           <li>
-            Fast Capsule Filling - These empty pill capsules come pre-separated
-            to make the capsule filling process quick and simple. Say goodbye to
-            crushed capsules... Our 00 separated capsules are specially designed
-            to be used with your capsule filling tray. Separated 00 capsules
-            hold 600mg to 1100mg of powdered supplements, depending on density.
+            Irure dolore enim tempor eu exercitation qui culpa laboris. Et irure
+            amet aute est exercitation labore. Non fugiat do voluptate qui dolor
+            incididunt anim magna irure mollit.
           </li>
           <li>
-            Snap Shut Design - Our expertly engineered snap shut design ensures
-            you wont waste any of your valuable powders, herbs or ingredients
-            during or after filling your pills. The click shut feature also
-            helps protect the contents of your 00 capsules separated from
-            humidity and air. Have peace of mind knowing that your vegan
-            capsules are secure.
-          </li>
-          <li>
-            Est eu ad est quis excepteur. Nostrud ex ut aute occaecat veniam
-            enim. Quis commodo irure ut quis elit tempor irure consectetur
-            mollit culpa excepteur. Dolor non velit dolore cillum qui. Pariatur
-            nostrud ut veniam pariatur qui qui non dolor consequat. Officia
-            velit laborum dolore consequat non id excepteur adipisicing in id et
-            commodo.
-          </li>
-          <li>
-            Nostrud amet cillum culpa ad eu non ex nulla eu est nisi. Aliquip
-            laborum officia aute irure exercitation et reprehenderit non
-            incididunt dolor non Lorem mollit ex. Aliquip esse in fugiat labore
-            ut elit ad eiusmod veniam cillum eiusmod quis do. Sit proident
-            consectetur magna aliqua occaecat laboris culpa. Incididunt eu
-            excepteur commodo officia do pariatur deserunt esse qui anim
-            proident aliqua. Mollit adipisicing consequat sit ex veniam esse
-            occaecat mollit. Sit dolor laboris proident anim ullamco ut laboris
-            sunt.
+            Do voluptate reprehenderit sit magna voluptate ad culpa. Cupidatat
+            et sint amet anim Lorem amet elit ea amet est exercitation proident
+            ea. Minim velit in veniam cupidatat est esse eu. Nisi in aliquip
           </li>
         </ul>
       </div>
     </div>
-    <div className="flex max-w-[300px] mx-auto">
-      <div className="flex flex-col px-[4px">
+    <img src="/iphone.png" className="w-[310px] left-[410px] h-auto absolute" />
+    <div className="flex max-w-[300px] ml-4">
+      <div className="flex flex-col px-[28px] pt-[50px]">
         <div className="flex items-center justify-between">
           <span className="text-[#007185] text-[14px] leading-[20px]">
             Visit the Vegavero Store
@@ -131,38 +110,9 @@ export const ProductInteriorPageMobile: FC<ProductSearchResultProps> = ({
         </h2>
         <ul className="list">
           <li>
-            Fast Capsule Filling - These empty pill capsules come pre-separated
-            to make the capsule filling process quick and simple. Say goodbye to
-            crushed capsules... Our 00 separated capsules are specially designed
-            to be used with your capsule filling tray. Separated 00 capsules
-            hold 600mg to 1100mg of powdered supplements, depending on density.
-          </li>
-          <li>
-            Snap Shut Design - Our expertly engineered snap shut design ensures
-            you wont waste any of your valuable powders, herbs or ingredients
-            during or after filling your pills. The click shut feature also
-            helps protect the contents of your 00 capsules separated from
-            humidity and air. Have peace of mind knowing that your vegan
-            capsules are secure.
-          </li>
-          <li>
-            Est eu ad est quis excepteur. Nostrud ex ut aute occaecat veniam
-            enim. Quis commodo irure ut quis elit tempor irure consectetur
-            mollit culpa excepteur. Dolor non velit dolore cillum qui. Pariatur
-            nostrud ut veniam pariatur qui qui non dolor consequat. Officia
-            velit laborum dolore consequat non id excepteur adipisicing in id et
-            commodo.
-          </li>
-          <li>
-            Nostrud amet cillum culpa ad eu non ex nulla eu est nisi. Aliquip
-            laborum officia aute irure exercitation et reprehenderit non
-            incididunt dolor non Lorem mollit ex. Aliquip esse in fugiat labore
-            ut elit ad eiusmod veniam cillum eiusmod quis do. Sit proident
-            consectetur magna aliqua occaecat laboris culpa. Incididunt eu
-            excepteur commodo officia do pariatur deserunt esse qui anim
-            proident aliqua. Mollit adipisicing consequat sit ex veniam esse
-            occaecat mollit. Sit dolor laboris proident anim ullamco ut laboris
-            sunt.
+            Irure dolore enim tempor eu exercitation qui culpa laboris. Et irure
+            amet aute est exercitation labore. Non fugiat do voluptate qui dolor
+            incididunt anim magna irure mollit.
           </li>
         </ul>
       </div>
