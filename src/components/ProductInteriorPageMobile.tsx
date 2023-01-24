@@ -67,8 +67,8 @@ export const ProductInteriorPageMobile: FC<ProductSearchResultProps> = ({
         </ul>
       </div>
     </div>
-    <img src="/iphone.png" className="w-[310px] left-[410px] h-auto absolute" />
-    <div className="flex max-w-[300px] ml-4">
+    <img src="/iphone.png" className="w-[260px] left-[410px] h-auto absolute" />
+    <div className="flex max-w-[250px] ml-4">
       <div className="flex flex-col px-[28px] pt-[50px]">
         <div className="flex items-center justify-between">
           <span className="text-[#007185] text-[14px] leading-[20px]">
