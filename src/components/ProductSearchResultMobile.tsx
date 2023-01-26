@@ -54,11 +54,11 @@ export const ProductSearchResultMobile: FC<ProductSearchResultProps> = ({
         </div>
       </div>
     </div>
-    <img src="/iphone.png" className="w-[260px] left-[410px] h-auto absolute" />
+    <img src="/iphone.png" className="w-[300px] left-[410px] h-auto absolute" />
     <div className="flex max-w-[250px] px-[28px] mt-[38px]">
       <div className="image-column">
         <div className="flex flex-col px-1 relative">
-          <div className="px-2 py-4 flex-grow image-overlay-grey">
+          <div className="px-2 py-4 flex-grow image-overlay-grey min-w-[100px]">
             <img className="max-h-[170px]" src={image} />
           </div>
         </div>

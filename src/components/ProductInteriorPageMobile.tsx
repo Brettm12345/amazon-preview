@@ -71,7 +71,7 @@ export const ProductInteriorPageMobile: FC<ProductSearchResultProps> = ({
     <div className="flex max-w-[250px] ml-4">
       <div className="flex flex-col px-[28px] pt-[50px]">
         <div className="flex items-center justify-between">
-          <span className="text-[#007185] text-[14px] leading-[20px]">
+          <span className="text-[#007185] text-[1.3rem] leading-[20px]">
             Visit the Vegavero Store
           </span>
           <span className="flex items-center">
